@@ -31,6 +31,8 @@ Install dependencies.
 pip install -r requirements.txt
 ```
 
+`requirements.txt` is the main dependency file and uses CPU-only PyTorch.
+
 ## Run
 
 Start the local application.
@@ -56,6 +58,9 @@ docker run --rm -p 7860:7860 filmdetector
 ```
 
 After start, open `http://127.0.0.1:7860`.
+
+The Docker image also uses the same CPU-only `requirements.txt`, which keeps
+the image smaller and avoids unused CUDA libraries.
 
 ## Project Structure
 
